@@ -29,7 +29,7 @@ pipeline {
                 }
             }
         }        
-node {    
+stage ("creds"){node {    
 withCredentials([file(variable: 'ID_TOKEN_FILE', credentialsId: 'gcp')]) {
   writeFile file: "$WORKSPACE_TMP/creds.json", text: """
     {
@@ -50,6 +50,6 @@ withCredentials([file(variable: 'ID_TOKEN_FILE', credentialsId: 'gcp')]) {
     gcloud auth login --brief --cred-file=$WORKSPACE_TMP/creds.json
     gcloud --project your-project run deploy …
   '''
-}}
+}}}
     }    
 }
