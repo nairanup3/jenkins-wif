@@ -30,7 +30,7 @@ pipeline {
             }
         }        
 stage ("creds"){steps { script {node {    
-withCredentials([file(variable: 'ID_TOKEN_FILE', credentialsId: 'gcp')]) {
+withCredentials([file(variable: 'ID_TOKEN_FILE', credentialsId: 'openid')]) {
   writeFile file: "$WORKSPACE_TMP/creds.json", text: """
     {
       "type": "external_account",
