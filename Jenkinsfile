@@ -4,7 +4,7 @@ pipeline {
         PROJECT_ID = 'anup-first-project'
         CLUSTER_NAME = 'cluster-1'
         LOCATION = 'us-central1'
-        CREDENTIALS_ID = '58811a4c-1d66-4ba3-8f34-27dbc3213783'
+        CREDENTIALS_ID = 'openid'
     }
     stages {
         stage("Checkout code") {
@@ -22,7 +22,7 @@ pipeline {
         stage("Push image") {
             steps {
                 script {
-                    docker.withRegistry('https://registry.hub.docker.com','bfc57088-8a0a-4faa-b745-b6bb020fb10f') {
+                    docker.withRegistry('https://registry.hub.docker.com','docker-hub') {
                             myapp.push("latest")
                             myapp.push("${env.BUILD_ID}")
                     }
