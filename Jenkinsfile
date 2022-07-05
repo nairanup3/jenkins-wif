@@ -36,7 +36,7 @@ withCredentials([file(variable: 'ID_TOKEN_FILE', credentialsId: 'openid1')]) {
       "audience": "//iam.googleapis.com/projects/anup-first-project/locations/global/workloadIdentityPools/test/providers/static",
       "subject_token_type": "urn:ietf:params:oauth:token-type:jwt",
       "token_url": "https://sts.googleapis.com/v1/token",
-      "service_account_impersonation_url": "https://iamcredentials.googleapis.com/v1/projects/-/serviceAccounts/jenkins-wif@anup-first-project.iam.gserviceaccount.com:generateAccessToken",
+      "service_account_impersonation_url": "https://iamcredentials.googleapis.com/v1/projects/anup-first-project/serviceAccounts/jenkins-wif@anup-first-project.iam.gserviceaccount.com:generateAccessToken",
       "credential_source": {
         "file": "$ID_TOKEN_FILE",
         "format": {
