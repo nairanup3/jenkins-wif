@@ -4,7 +4,7 @@ pipeline {
         PROJECT_ID = 'anup-first-project'
         CLUSTER_NAME = 'cluster-1'
         LOCATION = 'us-central1'
-        CREDENTIALS_ID = 'openid'
+        CREDENTIALS_ID = 'docker-hub'
     }
     stages {
         stage("Checkout code") {
