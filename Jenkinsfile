@@ -38,7 +38,7 @@ withCredentials([file(variable: 'ID_TOKEN_FILE', credentialsId: 'openid1')]) {
       "token_url": "https://sts.googleapis.com/v1/token",
       "service_account_impersonation_url": "https://iamcredentials.googleapis.com/v1/projects/-/serviceAccounts/jenkins-wif@anup-first-project.iam.gserviceaccount.com:generateAccessToken",
       "credential_source": {
-        "file": "/var/lib/jenkins/workspace/",
+        "file": "/var/lib/jenkins/workspace/token",
         "format": {
           "type": "text"
         }
