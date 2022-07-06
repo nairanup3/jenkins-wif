@@ -47,8 +47,7 @@ withCredentials([file(variable: 'ID_TOKEN_FILE', credentialsId: 'openid1')]) {
   """
   sh '''
     gcloud auth login --brief --cred-file=$WORKSPACE_TMP/creds.json
-    gcloud container clusters get-credentials cluster-1 --zone us-central1-c --project anup-first-project
-    kubectl apply -f deployment.yaml
+    gcloud container clusters list
   '''
 }}}}}
     }    
