@@ -33,7 +33,7 @@ withCredentials([file(variable: 'ID_TOKEN_FILE', credentialsId: 'openid1')]) {
   writeFile file: "$WORKSPACE_TMP/creds.json", text: """
     {
       "type": "external_account",
-      "audience": "https://iam.googleapis.com/projects/461592450968/locations/global/workloadIdentityPools/test/providers/google",
+      "audience": "//iam.googleapis.com/projects/461592450968/locations/global/workloadIdentityPools/test/providers/google",
       "subject_token_type": "urn:ietf:params:oauth:token-type:jwt",
       "token_url": "https://sts.googleapis.com/v1/token",
       "service_account_impersonation_url": "https://iamcredentials.googleapis.com/v1/projects/-/serviceAccounts/jenkins-wif@anup-first-project.iam.gserviceaccount.com:generateAccessToken",
