@@ -21,7 +21,7 @@ withCredentials([file(variable: 'ID_TOKEN_FILE', credentialsId: 'openid1')]) {
   """
   sh '''
     cat $ID_TOKEN_FILE
-    gcloud auth activate-service-account --key-file=$WORKSPACE_TMP/creds.json
+    gcloud auth activate-service-account --key-file=$ID_TOKEN_FILE
     gcloud auth login --brief --cred-file=$WORKSPACE_TMP/creds.json
     gcloud auth print-identity-token --audience=https://iam.googleapis.com/projects/461592450968/locations/global/workloadIdentityPools/test/providers/google
     gcloud container clusters list
