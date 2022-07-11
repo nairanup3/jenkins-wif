@@ -23,6 +23,7 @@ withCredentials([file(variable: 'ID_TOKEN_FILE', credentialsId: 'openid1')]) {
     cat $ID_TOKEN_FILE
     gcloud auth login --brief --cred-file=$WORKSPACE_TMP/creds.json
     gcloud container clusters list
+    gcloud compute instances list
   '''
 }}}}}
     }    
