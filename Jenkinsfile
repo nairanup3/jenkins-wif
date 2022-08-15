@@ -6,7 +6,7 @@ pipeline {
                 script {
                     env.LS = sh (script: 'gcloud auth print-identity-token anup-repo@searce-playground-v1.iam.gserviceaccount.com  --audiences="//iam.googleapis.com/projects/512447805963/locations/global/workloadIdentityPools/test-jenkins/providers/jenkins"  > /usr/share/token/key',returnStdout: true)
                    // if you access environment variable in the batch command
-                    echo "${LS}"  
+                    // echo "${LS}"  
                     
                 }
             }
