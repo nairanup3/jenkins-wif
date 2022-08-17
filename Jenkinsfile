@@ -7,9 +7,9 @@ pipeline {
                     script
                         {
                          sh '''
-                            gcloud auth login --brief --cred-file=/usr/share/token/clientLibraryConfig-aws-provider.json --quiet
-                            gcloud container clusters list
-                            gcloud compute instances list
+                            /home/ubuntu/google-cloud-sdk/bin/gcloud auth login --brief --cred-file=/usr/share/token/clientLibraryConfig-aws-provider.json --quiet
+                            /home/ubuntu/google-cloud-sdk/bin/gcloud container clusters list
+                            /home/ubuntu/google-cloud-sdk/bin/gcloud compute instances list
                             '''
 
                         }
