@@ -1,13 +1,6 @@
 pipeline {
     agent any
     stages {
-       stage("Generating OIDC token and saving it to a file") {
-            steps {
-                script {
-                       // sh (script: 'gcloud auth print-identity-token anup-repo@searce-playground-v1.iam.gserviceaccount.com  --audiences="//iam.googleapis.com/projects/512447805963/locations/global/workloadIdentityPools/test-jenkins/providers/jenkins"  > /usr/share/token/key',returnStdout: true)
-                }
-            }
-        }
         stage ("getting the WIF config file into a variable")
         {
             steps {
